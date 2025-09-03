@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda en Línea</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                  <img src="img/logo.png" alt="Logo TiendaFlex" width="70" height="70" class="me-2">
+                    TiendaFlex</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productos">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="ver-carrito" href="carrito.html">
+                                🛒 Carrito <span id="carrito-contador" class="badge bg-primary">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="contenedor-alertas"></div>
+    <main class="container my-5">
+    <section id="productos" class="mb-5">
+      <h2 class="text-center mb-4">Nuestros Productos</h2>
+      <div id="lista-productos" class="row">
+
+        <!-- Producto 1 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="img/zapatilla deportiva.jpg" class="card-img-top" alt="Zapatilla Deportiva">
+            <div class="card-body">
+              <h5 class="card-title">Zapatilla Deportiva</h5>
+              <p class="card-text">$89.99</p>
+              <button class="btn btn-primary w-100 btn-agregar-carrito" 
+                      data-id="1" 
+                      data-nombre="Zapatilla Deportiva" 
+                      data-precio="89.99" 
+                      data-imagen="img/producto1.jpg">
+                Añadir al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="img/bota_cuero.jpg" class="card-img-top" alt="Bota de Cuero">
+            <div class="card-body">
+              <h5 class="card-title">Bota de Cuero</h5>
+              <p class="card-text">$120.00</p>
+              <button class="btn btn-primary w-100 btn-agregar-carrito" 
+                      data-id="2" data-nombre="Bota de Cuero" 
+                      data-precio="120.00" data-imagen="img/producto2.jpg">
+                Añadir al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="img/camisacasual.webp" class="card-img-top" alt="Camisa Casual">
+            <div class="card-body">
+              <h5 class="card-title">Camisa Casual</h5>
+              <p class="card-text">$45.50</p>
+              <button class="btn btn-primary w-100 btn-agregar-carrito" 
+                      data-id="3" data-nombre="Camisa Casual" 
+                      data-precio="45.50" data-imagen="img/producto3.jpg">
+                Añadir al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="img/jeans.jpg" class="card-img-top" alt="Pantalón Jeans">
+            <div class="card-body">
+              <h5 class="card-title">Pantalón Jeans</h5>
+              <p class="card-text">$59.99</p>
+              <button class="btn btn-primary w-100 btn-agregar-carrito" 
+                      data-id="4" data-nombre="Pantalón Jeans" 
+                      data-precio="59.99" data-imagen="img/producto4.jpg">
+                Añadir al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="img/reloj.avif" class="card-img-top" alt="Reloj Clásico">
+            <div class="card-body">
+              <h5 class="card-title">Reloj Clásico</h5>
+              <p class="card-text">$150.00</p>
+              <button class="btn btn-primary w-100 btn-agregar-carrito" 
+                      data-id="5" data-nombre="Reloj Clásico" 
+                      data-precio="150.00" data-imagen="img/producto5.jpg">
+                Añadir al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="img/bolso.jpeg" class="card-img-top" alt="Bolso de Mano">
+            <div class="card-body">
+              <h5 class="card-title">Bolso de Mano</h5>
+              <p class="card-text">$85.00</p>
+              <button class="btn btn-primary w-100 btn-agregar-carrito" 
+                      data-id="6" data-nombre="Bolso de Mano" 
+                      data-precio="85.00" data-imagen="img/producto6.jpg">
+                Añadir al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="img/gorra.avif" class="card-img-top" alt="Gorra Deportiva">
+            <div class="card-body">
+              <h5 class="card-title">Gorra Deportiva</h5>
+              <p class="card-text">$25.00</p>
+              <button class="btn btn-primary w-100 btn-agregar-carrito" 
+                      data-id="7" data-nombre="Gorra Deportiva" 
+                      data-precio="25.00" data-imagen="img/producto7.jpg">
+                Añadir al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="img/sudaderaunisex.avif" class="card-img-top" alt="Sudadera Unisex">
+            <div class="card-body">
+              <h5 class="card-title">Sudadera Unisex</h5>
+              <p class="card-text">$60.00</p>
+              <button class="btn btn-primary w-100 btn-agregar-carrito" 
+                      data-id="8" data-nombre="Sudadera Unisex" 
+                      data-precio="60.00" data-imagen="img/producto8.jpg">
+                Añadir al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 9 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="img/zapato.webp" class="card-img-top" alt="Zapato Formal">
+            <div class="card-body">
+              <h5 class="card-title">Zapato Formal</h5>
+              <p class="card-text">$110.00</p>
+              <button class="btn btn-primary w-100 btn-agregar-carrito" 
+                      data-id="9" data-nombre="Zapato Formal" 
+                      data-precio="110.00" data-imagen="img/producto9.jpg">
+                Añadir al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 10 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="img/cinturon.jpg" class="card-img-top" alt="Cinturón de Piel">
+            <div class="card-body">
+              <h5 class="card-title">Cinturón de Piel</h5>
+              <p class="card-text">$35.00</p>
+              <button class="btn btn-primary w-100 btn-agregar-carrito" 
+                      data-id="10" data-nombre="Cinturón de Piel" 
+                      data-precio="35.00" data-imagen="img/producto10.jpg">
+                Añadir al carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    </main>
+
+        <section id="contacto" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Contacto</h2>
+                <form id="formulario-contacto" class="mx-auto" style="max-width: 600px;">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p>&copy; 2025 TiendaFlex - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
