@@ -41,52 +41,40 @@
         <h2 class="text-center mb-4">Resumen de tu Compra</h2>
 
         <div id="lista-carrito" class="row">
+            <!-- Aquí se mostrarán los productos del carrito dinámicamente -->
+            <!-- Ejemplo de producto en carrito -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Zapatilla Deportiva</h5>
+                        <p class="card-text">$89.99</p>
+                    </div>
+                </div>
             </div>
-                 <main class="container my-5">
-    <section id="carrito" class="mb-5">
-      <h2 class="text-center mb-4">Carrito de Compras</h2>
-      <div id="lista-carrito" class="row">
-
-        <!-- Producto en carrito (ejemplo) -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Zapatilla Deportiva</h5>
-              <p class="card-text">$89.99</p>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Bota de Cuero</h5>
+                        <p class="card-text">$120.00</p>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Camisa Casual</h5>
+                        <p class="card-text">$45.50</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Producto en carrito (ejemplo) -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Bota de Cuero</h5>
-              <p class="card-text">$120.00</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Producto en carrito (ejemplo) -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Camisa Casual</h5>
-              <p class="card-text">$45.50</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Total de la compra -->
-      <div class="text-end mt-4">
-        <h4>Total: <span class="text-success">$255.49</span></h4>
-        <button class="btn btn-success mt-3">Finalizar Compra</button>
-        <button class="btn btn-danger mt-3">Vaciar Carrito</button>
-      </div>
-    </section>
-  </main>
+        <section id="resumen-compra" class="text-end mt-4">
+            <h3>Total: $<span id="total-carrito">255.49</span></h3>
+            <button id="finalizar-compra" class="btn btn-success btn-lg mt-2">Finalizar Compra</button>
+            <button id="vaciar-carrito" class="btn btn-danger btn-lg mt-2">Vaciar Carrito</button>
+        </section>
+    </main>
 
     <footer class="bg-dark text-white text-center p-3 mt-5">
         <p>&copy; 2025 TiendaFlex - Todos los derechos reservados.</p>
