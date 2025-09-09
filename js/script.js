@@ -15,7 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     
-    
+    function agregarProducto(id, nombre, precio) {
+    carrito.push({ id, nombre, precio });
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    }
+
     function cargarEventListeners() {
         if (listaProductos) {
             listaProductos.addEventListener('click', agregarProducto);
@@ -99,23 +103,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Función para gestionar la finalización de la compra
-    function finalizarCompra() {
-        // Verificamos si hay elementos en el carrito
-        if (carrito.length > 0) {
-            // Si hay productos, mostramos mensaje de agradecimiento y vaciamos el carrito
-            mostrarAlerta('Muchas gracias por su compra', 'exito');
-            
-            // Limpiamos el carrito completamente
-            carrito = [];
-            limpiarHTML(listaCarrito);
-            guardarCarritoEnStorage();
-            actualizarContadorCarrito();
-            calcularTotal();
-        } else {
-            // Si no hay productos, mostramos mensaje de error
-            mostrarAlerta('El carrito está vacío', 'error');
-        }
+function finalizarCompra() {
+    const resumenFinal = document.getElementById('resumen-final');
+
+    if (carrito.length > 0) {
+        let resumen = "<h4>Resumen de tu compra:</h4><ul>";
+        let total = 0;
+
+        carrito.forEach(producto => {
+            resumen += `<li>${producto.nombre} - $${producto.precio.toFixed(2)}</li>`;
+            total += producto.precio;
+        });
+
+        resumen += `</ul><h5>Total: $${total.toFixed(2)}</h5>`;
+
+        // Mostramos el resumen dentro de la página
+        resumenFinal.innerHTML = resumen;
+        resumenFinal.classList.remove('d-none'); // lo mostramos
+
+        // Mensaje de agradecimiento
+        mostrarAlerta('Muchas gracias por su compra', 'exito');
+
+        // Limpiamos carrito
+        carrito = [];
+        limpiarHTML(listaCarrito);
+        guardarCarritoEnStorage();
+        actualizarContadorCarrito();
+        calcularTotal();
+
+    } else {
+        mostrarAlerta('El carrito está vacío', 'error');
     }
+}
+
 
     
 
