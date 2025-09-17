@@ -245,3 +245,22 @@ footer p{ margin: 0; opacity: .9; }
   transform: translateY(-1.5px);
   box-shadow: 0 10px 24px rgba(25,135,84,.25);
 }
+
+#resumen-final .card {
+    background: #fdfdfd;
+    border-left: 6px solid #0d6efd; /* azul Bootstrap */
+}
+
+#resumen-final h4 {
+    font-size: 1.5rem;
+}
+
+#resumen-final #resumen-items li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #ccc;
+    font-size: 1.1rem;
+}
+
+#resumen-final #resumen-items li:last-child {
+    border-bottom: none;
+}

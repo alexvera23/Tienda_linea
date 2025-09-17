@@ -37,19 +37,26 @@
         </nav>
     </header>
 
-    <main class="container my-5">
-        <h2 class="text-center mb-4">Resumen de tu Compra</h2>
+       <main class="container my-5">
 
-        <div id="lista-carrito" class="row">
-          
-        </div>
+            <h1 class="text-center mb-4">Detalles del Carrito</h1>
 
-        <section id="resumen-final" class="alert alert-info mt-4 d-none"></section>
+        <div id="lista-carrito" class="row"></div>
 
-            <h3>Total: $<span id="total-carrito">255.49</span></h3>
-            <button id="finalizar-compra" class="btn btn-primary btn-lg mt-2">Finalizar Compra</button>
-            <button id="vaciar-carrito" class="btn btn-warning btn-lg mt-2">Vaciar Carrito</button>
-        </section>
+            <!-- Resumen Final estilizado -->
+            <section id="resumen-final" class="d-none">
+                <div class="card shadow-lg border-0 rounded-3 p-4 mt-4">
+
+                    <!-- Aquí saldrá el botón de volver al index después de comprar -->
+                    <div id="volver-inicio" class="text-center mt-4 d-none"></div>
+                </div>
+            </section>  
+
+            <!-- Botones iniciales -->
+            <div id="botones-acciones" class="text-center mt-4">
+                <button id="finalizar-compra" class="btn btn-primary btn-lg me-2">Finalizar Compra</button>
+                <button id="vaciar-carrito" class="btn btn-warning btn-lg">Vaciar Carrito</button>
+            </div>
     </main>
 
     <footer class="bg-dark text-white text-center p-3 mt-5">
